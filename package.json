@@ -1,0 +1,52 @@
+{
+  "name": "collaborative-code-editor",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "server": "node server.js"
+  },
+  "dependencies": {
+    "@codemirror/autocomplete": "^6.15.0",
+    "@codemirror/collab": "^6.1.1",
+    "@codemirror/lang-cpp": "^6.0.2",
+    "@codemirror/lang-css": "^6.2.1",
+    "@codemirror/lang-html": "^6.4.8",
+    "@codemirror/lang-java": "^6.0.1",
+    "@codemirror/lang-javascript": "^6.2.2",
+    "@codemirror/lang-python": "^6.1.4",
+    "@codemirror/lang-sql": "^6.8.0",
+    "@uiw/codemirror-theme-vscode": "^4.21.24",
+    "@uiw/react-codemirror": "^4.21.24",
+    "axios": "^1.8.4",
+    "cors": "^2.8.5",
+    "express": "^4.18.3",
+    "lucide-react": "^0.344.0",
+    "peerjs": "^1.5.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.22.3",
+    "socket.io": "^4.7.4",
+    "socket.io-client": "^4.7.4",
+    "uuid": "^9.0.1",
+    "ws": "^8.18.1",
+    "y-codemirror.next": "^0.3.5",
+    "y-websocket": "^3.0.0",
+    "yjs": "^13.6.24"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.18",
+    "eslint": "^9.9.1",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.2"
+  }
+}

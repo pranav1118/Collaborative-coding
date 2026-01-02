@@ -1,0 +1,44 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  # Uncomment if your source code is in a subdirectory
+  # base = "subfolder"
+
+[dev]
+  command = "npm run dev"
+  port = 5173
+
+# Netlify Functions configuration
+[functions]
+  directory = "netlify/functions"
+
+# Environment variable placeholder - actual variables should be set in Netlify dashboard
+[build.environment]
+  NODE_VERSION = "18"
+  
+# Example redirect rules
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# CORS preflight headers for all routes
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, PUT, DELETE, OPTIONS"
+    Access-Control-Allow-Headers = "Origin, X-Requested-With, Content-Type, Accept"
+
+# WebSocket proxy configuration
+[[redirects]]
+  from = "/socket.io/*"
+  to = "https://collaborative-code-editor-jo24.onrender.com/socket.io/:splat"
+  status = 200
+  force = true
+  [redirects.headers]
+    Connection = "upgrade"
+    Upgrade = "websocket"
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, PUT, DELETE, OPTIONS"
+    Access-Control-Allow-Headers = "Origin, X-Requested-With, Content-Type, Accept" 
